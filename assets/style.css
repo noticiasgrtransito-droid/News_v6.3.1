@@ -1,0 +1,53 @@
+
+:root{--blue:#072A5F;--mid:#0d47a1;--bg:#f5f7fa;--card:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;overflow-x:hidden}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:var(--blue);color:#fff;position:sticky;top:0;z-index:40}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{background:#fff;color:var(--blue);padding:8px 12px;font-weight:700;border-radius:6px}
+.title{font-weight:700;font-size:18px}
+.controls{display:flex;align-items:center;gap:8px}
+.controls input{padding:8px;border-radius:6px;border:1px solid #ddd;min-width:260px}
+.filters{background:#fff;padding:10px;border-bottom:1px solid #e6eef8;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.container{display:flex;gap:18px;max-width:1200px;margin:18px auto;padding:0 12px}
+.left{flex:2}
+.right{flex:1;position:sticky;top:100px;height:fit-content}
+.card{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 4px 12px rgba(2,6,23,0.06);margin-bottom:12px}
+.cards{display:flex;gap:12px;margin-bottom:12px}
+.card.stat{flex:1;text-align:center;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;padding:16px}
+.card.stat i{font-size:20px}
+.graficos-container{display:flex;gap:12px;justify-content:center;align-items:flex-start;overflow:hidden}
+.grafico{width:400px;height:250px;background:#fff;border-radius:8px;padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.mapcard{margin-top:12px}
+.mapheader{display:flex;justify-content:space-between;align-items:center}
+.news-list{display:flex;flex-direction:column;gap:8px}
+.news-item{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px;border-bottom:1px solid #eef6fb;cursor:pointer;background:#fff;padding:10px;border-radius:6px}
+.news-item .meta{color:#666;font-size:13px;margin-left:6px}
+.news-item a{color:var(--mid);font-weight:600;text-decoration:none}
+.footer{background:var(--blue);color:#fff;text-align:center;padding:12px;margin-top:18px}
+.login-screen{display:flex;align-items:center;justify-content:center;height:100vh;background:linear-gradient(180deg,#072A5F,#0d47a1);color:#fff}
+.login-box{background:#fff;color:#072A5F;padding:24px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.2);width:320px;text-align:center}
+.login-box input{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ddd}
+.msg{color:#d00}
+.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.45)}
+.modal-content{background:#fff;margin:6% auto;padding:18px;border-radius:12px;width:80%;max-width:900px;box-shadow:0 6px 20px rgba(0,0,0,0.25)}
+.modal-body{max-height:60vh;overflow:auto}
+.close{float:right;font-size:22px;cursor:pointer}
+.btn-close{background:var(--mid);color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;margin-top:12px}
+.concess{padding:8px;border-radius:6px;margin-bottom:6px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.06);cursor:pointer;font-weight:700}
+.concess:hover{background:#f0f4fb}
+.totalline{display:flex;justify-content:flex-end;align-items:center;gap:12px;color:#333;margin-top:8px;font-weight:700}
+.totalline .time{color:#666;font-weight:400;font-size:13px}
+.icon-acc{background:#d32f2f;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.icon-int{background:#ff9800;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.icon-rob{background:#f44336;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.icon-fur{background:#ffb300;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+@media(max-width:900px){.container{flex-direction:column}.graficos-container{flex-direction:column;align-items:center}.grafico{width:100%}}
+
+
+
+/* v6.3 print rules (center header for PDF/print) */
+@media print {
+  .topbar, .controls, .btn, .modal { display:none !important; }
+  .print-header { text-align:center; display:block; margin-bottom:8px; }
+  @page { margin: 15mm 10mm; }
+}

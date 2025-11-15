@@ -1,0 +1,44 @@
+{
+  "previsao_meteorologica": [
+    {
+      "source": "INMET",
+      "example": "Chuva forte; ventania; calor extremo",
+      "level": "moderate"
+    }
+  ],
+  "desastres_naturais": [
+    {
+      "source": "CEMADEN",
+      "example": "Deslizamento; Inundação; Alerta de Cheias",
+      "level": "critical"
+    }
+  ],
+  "defesa_populacao": [
+    {
+      "source": "Defesa Civil",
+      "example": "Evacuação; Alerta geral",
+      "level": "critical"
+    }
+  ],
+  "riscos_rios": [
+    {
+      "source": "ANA",
+      "example": "Cheia, crise hídrica",
+      "level": "moderate"
+    }
+  ],
+  "riscos_mar": [
+    {
+      "source": "Marinha",
+      "example": "Ressaca; Mar grosso",
+      "level": "moderate"
+    }
+  ],
+  "barragens": [
+    {
+      "source": "Operadores",
+      "example": "Risco de rompimento de barragem",
+      "level": "critical"
+    }
+  ]
+}

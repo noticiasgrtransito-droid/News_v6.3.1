@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Corpo de Bombeiros",
+    "tel": "193",
+    "site": "https://www.corpodebombeiros.sp.gov.br/#/"
+  },
+  {
+    "name": "Polícia Civil",
+    "tel": "181",
+    "site": "https://www.policiacivil.sp.gov.br/portal/faces/pages_home"
+  },
+  {
+    "name": "Polícia Militar",
+    "tel": "190",
+    "site": "https://www.policiamilitar.sp.gov.br/"
+  },
+  {
+    "name": "SAMU",
+    "tel": "192",
+    "site": "https://samues.com.br/"
+  },
+  {
+    "name": "PRF",
+    "tel": "191",
+    "site": "https://www.prf.gov.br"
+  },
+  {
+    "name": "Defesa Civil",
+    "tel": "199",
+    "site": "https://www.defesacivil.sp.gov.br/"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Incêndio em área portuária - Santos",
+    "link": "https://g1.globo.com/example6",
+    "pubDate": "2025-11-11T19:00:00",
+    "source": "G1",
+    "snippet": "Incêndio em área próxima aos contêineres.",
+    "type": "Acidente",
+    "road": "BR-050",
+    "region": "Sudeste",
+    "city": "Santos, SP",
+    "lat": -23.9531,
+    "lon": -46.3336
+  },
+  {
+    "title": "Rodoanel interdição no KM 41 por acidente leve",
+    "link": "https://ccr.com/example5",
+    "pubDate": "2025-11-10T09:15:00",
+    "source": "CCR",
+    "snippet": "Acidente causa lentidão no KM 41.",
+    "type": "Acidente",
+    "road": "RODOANEL KM 41",
+    "region": "Sudeste",
+    "city": "São Paulo, SP",
+    "lat": -23.5,
+    "lon": -46.65
+  },
+  {
+    "title": "Acidente com carreta na BR-381 próximo a Betim",
+    "link": "https://g1.globo.com/example1",
+    "pubDate": "2025-11-09T16:45:00",
+    "source": "G1",
+    "snippet": "Colisão envolvendo carreta na pista marginal.",
+    "type": "Acidente",
+    "road": "BR-381",
+    "region": "Sudeste",
+    "city": "Betim, MG",
+    "lat": -19.9667,
+    "lon": -44.1986
+  },
+  {
+    "title": "Roubo de carga na BR-153 próximo a Anápolis",
+    "link": "https://r7.com/example2",
+    "pubDate": "2025-11-09T07:30:00",
+    "source": "R7",
+    "snippet": "Carga roubada durante a madrugada.",
+    "type": "Roubo",
+    "road": "BR-153",
+    "region": "Centro-Oeste",
+    "city": "Anápolis, GO",
+    "lat": -16.328,
+    "lon": -48.953
+  },
+  {
+    "title": "Interdição por obras na BR-050 entre Uberaba e Uberlândia",
+    "link": "https://prf.gov.br/example3",
+    "pubDate": "2025-11-08T22:10:00",
+    "source": "PRF",
+    "snippet": "Manutenção gera interdição parcial.",
+    "type": "Interdição",
+    "road": "BR-050",
+    "region": "Centro-Oeste",
+    "city": "Uberaba, MG",
+    "lat": -19.7475,
+    "lon": -47.9389
+  },
+  {
+    "title": "Furto em pátio de caminhões na zona portuária de Santos",
+    "link": "https://ccrecovias.com/example4",
+    "pubDate": "2025-11-08T20:05:00",
+    "source": "Ecovias",
+    "snippet": "Furto em pátio de caminhões.",
+    "type": "Furto",
+    "road": "BR-050",
+    "region": "Sudeste",
+    "city": "Santos, SP",
+    "lat": -23.9531,
+    "lon": -46.3336
+  }
+]
