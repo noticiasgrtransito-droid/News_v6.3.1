@@ -1,12 +1,50 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CON - Central Operacional News (v6.1)</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CON - Central Operacional News (v6.3.1)</title>
 <link rel="icon" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<style>
+/* Tela de login cobrindo toda a página */
+#login-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Mensagem de erro */
+.msg {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* App escondido até login */
+#app {
+  display: none;
+}
+
+/* Classe para mostrar app */
+#app.visible {
+  display: block;
+}
+</style>
 </head>
 <body>
+
+<!-- LOGIN -->
 <div id="login-screen" class="login-screen">
   <div class="login-box">
     <h1>TORRES - Central Operacional News (CON)</h1>
@@ -17,7 +55,8 @@
   </div>
 </div>
 
-<div id="app" class="hidden">
+<!-- APP -->
+<div id="app">
   <header class="topbar">
     <div class="brand"><div class="logo">NEWS</div><div class="title">Central Operacional News (CON)</div></div>
     <div class="controls">
@@ -33,9 +72,33 @@
   </header>
 
   <div class="filters">
-    <label>Ocorrência: <select id="typeFilter"><option value="">Todas</option><option>Acidente</option><option>Interdição</option><option>Trânsito</option><option>Roubo</option><option>Furto</option><option>Porto</option><option>Sindicato</option><option>Internacional</option><option>Outros</option></select></label>
-    <label>Região: <select id="regionFilter"><option value="">Todas</option><option>Sudeste</option><option>Sul</option><option>Centro-Oeste</option><option>Norte</option><option>Nordeste</option></select></label>
-    <label>Rodovia: <select id="roadFilter"><option value="">Todas</option></select></label>
+    <label>Ocorrência: 
+      <select id="typeFilter">
+        <option value="">Todas</option>
+        <option>Acidente</option>
+        <option>Interdição</option>
+        <option>Trânsito</option>
+        <option>Roubo</option>
+        <option>Furto</option>
+        <option>Porto</option>
+        <option>Sindicato</option>
+        <option>Internacional</option>
+        <option>Outros</option>
+      </select>
+    </label>
+    <label>Região: 
+      <select id="regionFilter">
+        <option value="">Todas</option>
+        <option>Sudeste</option>
+        <option>Sul</option>
+        <option>Centro-Oeste</option>
+        <option>Norte</option>
+        <option>Nordeste</option>
+      </select>
+    </label>
+    <label>Rodovia: 
+      <select id="roadFilter"><option value="">Todas</option></select>
+    </label>
   </div>
 
   <main class="container">
@@ -72,15 +135,31 @@
   <footer class="footer">TORRES - Central Operacional News (CON)</footer>
 </div>
 
+<!-- MODAIS -->
 <div id="ajudaModal" class="modal"><div class="modal-content"><span class="close" data-for="ajudaModal">&times;</span><h2>Ajuda</h2><div class="modal-body" id="ajudaBody"></div><button class="btn-close" data-for="ajudaModal">Fechar</button></div></div>
-
 <div id="fontesModal" class="modal"><div class="modal-content"><span class="close" data-for="fontesModal">&times;</span><h2>Fontes (última coleta)</h2><div id="fontesList" class="modal-body"></div><button class="btn-close" data-for="fontesModal">Fechar</button></div></div>
-
 <div id="fontesBuscaModal" class="modal"><div class="modal-content"><span class="close" data-for="fontesBuscaModal">&times;</span><h2>Fontes de Busca (fixas)</h2><div class="modal-body"><ul id="fixedSources"></ul></div><button class="btn-close" data-for="fontesBuscaModal">Fechar</button></div></div>
 
+<!-- SCRIPTS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 <script defer src="assets/app_v6.3.js"></script>
+
+<script>
+document.getElementById('loginBtn').addEventListener('click', function() {
+  const user = document.getElementById('user').value;
+  const pass = document.getElementById('pass').value;
+
+  if(user === 'adm' && pass === 'adm') {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('app').classList.add('visible');
+  } else {
+    document.getElementById('loginMsg').innerText = 'Usuário ou senha incorretos!';
+  }
+});
+</script>
+
 </body>
 </html>
